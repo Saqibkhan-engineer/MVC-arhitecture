@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economics Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .input-section, .output-section {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .output-section p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Economics Data:</h2>
+
+    <!-- Input Section -->
+    <div class="input-section">
+        <label for="supply">Enter Supply: </label>
+        <input type="number" id="supply" placeholder="Enter supply value">
+        <br><br>
+        <label for="demand">Enter Demand: </label>
+        <input type="number" id="demand" placeholder="Enter demand value">
+        <br><br>
+        <button onclick="updateData()">Update Data</button>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-section">
+        <p id="supply-output">Supply: </p>
+        <p id="demand-output">Demand: </p>
+    </div>
+
+    <script>
+        // Function to update the displayed data
+        function updateData() {
+            // Get values from the input fields
+            var supply = document.getElementById('supply').value;
+            var demand = document.getElementById('demand').value;
+
+            // Display the values in the output section
+            document.getElementById('supply-output').innerText = 'Supply: ' + supply;
+            document.getElementById('demand-output').innerText = 'Demand: ' + demand;
+        }
+    </script>
+
+</body>
+</html>
